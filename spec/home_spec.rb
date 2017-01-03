@@ -21,6 +21,7 @@ class FullPageTest
       @driver.quit
     end
 
+    #TODO navigation feature
     it 'changes the page to about us' do
       @driver.get(@base_url + '/')
       @driver.find_element(:id, 'menu-item-158').click
@@ -28,6 +29,7 @@ class FullPageTest
       assert_equal @driver.title, 'About us | Demoqa'
     end
 
+    #TODO home feature
     it 'checks if the hover is working', :start do
       @driver.get(@base_url)
       assert_true(@driver.find_elements(:class, 'ui-tooltip-content').empty?)
